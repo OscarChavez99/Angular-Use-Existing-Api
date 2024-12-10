@@ -1,27 +1,39 @@
 # AngularUseExistingApi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+This project demonstrates how to call an existing API from the internet, which is stored at the following URL:
 
-## Development server
+https://jsonplaceholder.typicode.com/todos/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![image](https://github.com/user-attachments/assets/030c3ba5-fcd4-4871-a2b3-fa382ebb5c1f)
 
-## Code scaffolding
+You can retrieve information about a specific user by adding the user ID to the URL:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![image](https://github.com/user-attachments/assets/1c239bc4-c98a-4b4f-9674-a8b168af4507)
 
-## Build
+## How it works
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+We enter the user **ID** we want to retrieve in the input field and then press the button
 
-## Running unit tests
+![image](https://github.com/user-attachments/assets/dd0fb321-ae28-4c5f-9294-f1260e477118)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+As we can see, the information is displayed in the mat-cards.
 
-## Running end-to-end tests
+![image](https://github.com/user-attachments/assets/b62641fb-a8f5-4b59-9844-b5b3b78d818e)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+This is possible because our form has an input called "searchID"
 
-## Further help
+![image](https://github.com/user-attachments/assets/35478c7f-cfbd-4a11-91e4-cc97b229b05f)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+When the button is pressed, we call the **getUser** method:
+
+![image](https://github.com/user-attachments/assets/b7a47f51-6b02-4887-a148-73a79678e9c7)
+
+The method retrieves the value from the input and passes it to the URL that calls the API
+
+![image](https://github.com/user-attachments/assets/c2989a7f-6fb1-4d38-8ec9-bb4715dbffc0)
+
+Then, we fetch the information from the API and display it in the HTML:
+
+![image](https://github.com/user-attachments/assets/c6bf36c8-e9ee-4d19-aeb6-d49ea502c26d)
+
+![image](https://github.com/user-attachments/assets/4007df99-fb39-4676-a117-7cb2650e7b31)
