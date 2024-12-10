@@ -1,0 +1,26 @@
+<form [formGroup]="form" class="form" (ngSubmit)="getUser()">
+  
+  <mat-form-field class="full-width">
+    <mat-label>Search ID</mat-label>
+    <input matInput type="number" placeholder="Search ID" formControlName="searchID">
+    <mat-error *ngIf="form.get('searchID')?.hasError('required')">ID Required</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" class="button">Call API with ID</button>
+  
+  <mat-card appearance="outlined">
+    <mat-card-title>ID: </mat-card-title>
+    <mat-card-content>{{user.id}}</mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined">
+    <mat-card-title>Title: </mat-card-title>
+    <mat-card-content>{{user.title}}</mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined">
+    <mat-card-title>Completed: </mat-card-title>
+    <mat-card-content>{{user.completed}}</mat-card-content>
+  </mat-card>
+
+</form>
